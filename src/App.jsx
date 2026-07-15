@@ -1,5 +1,6 @@
-import { BrowserRouter, Route, Routes, Link} from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
@@ -9,12 +10,8 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <nav className="navbar">
-        <Link to="/">Главная</Link>
-        <Link to="/products">Каталог</Link>
-        <Link to="/about">О нас</Link>
-      </nav>
-
+      <Header />
+      
       <main className="content">
         <Routes>
           <Route path="/" element={<Home />}></Route>
